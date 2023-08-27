@@ -15,6 +15,7 @@ pipeline {
                     // Make sure Ansible is in the PATH or specify its absolute path.
                     // Execute the playbook
                     sh '''
+                        echo $PATH
                         /home/jits/.local/bin/ansible-playbook /home/jits/mygit/apptest_pb/appstart.yml -i /home/jits/mygit/apptest_pb/myinven.ini
                     '''
                 }
