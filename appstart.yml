@@ -3,8 +3,9 @@
   become: yes
   become_user: jits
   gather_facts: false
-  vars_files:
-    - app_var.yml  
+  vars:
+    - W3SVC
+    - Themes
 
   tasks:
     - name: "Get service status"
