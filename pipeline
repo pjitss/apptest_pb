@@ -17,6 +17,12 @@ node {
     stage ('git fetch') {
         git branch: 'main', credentialsId: 'ansible_user', url: 'https://github.com/pjitss/apptest_pb.git'
     }
-}
 
+    stage (executing playbook) {
+        ansiblePlaybook(
+            playbook: "appstart.yml"
+            extras: " -i "myinven.ini" "
+        )
+    }
+}
 
