@@ -16,6 +16,7 @@ pipeline {
                     // Execute the playbook
                     sh '''
                         echo $PATH
+                        ls -l /home/jits/.local/bin/ansible-playbook
                         /home/jits/.local/bin/ansible-playbook /home/jits/mygit/apptest_pb/appstart.yml -i /home/jits/mygit/apptest_pb/myinven.ini
                     '''
                 }
