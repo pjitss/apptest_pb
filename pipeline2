@@ -14,9 +14,11 @@ pipeline {
                 script {
                     // Make sure Ansible is in the PATH or specify its absolute path.
                     // Execute the playbook
+                    sh '''
                         echo $PATH
                         ls -l /home/jits/.local/bin/ansible-playbook
                         ansible-playbook /home/jits/mygit/apptest_pb/appstart.yml -i /home/jits/mygit/apptest_pb/myinven.ini
+                    '''
                 }
             }
         }
