@@ -1,17 +1,17 @@
 import groovy.json.JsonSluperClassic
 
-properties(
+#properties(
 
-        parameters([
-            string)defaultValue: 'main', name: 'BRANCH'),
-            string)defaultValue: '0000', name: 'REQID'),
-            string)defaultValue: 'app', name: 'comp'),
-            string)defaultValue: '', name: 'SERVICE')
-
-        ]
-
-        )
-)
+#        parameters([
+#            string)defaultValue: 'main', name: 'BRANCH'),
+#            string)defaultValue: '0000', name: 'REQID'),
+#            string)defaultValue: 'app', name: 'comp'),
+#            string)defaultValue: '', name: 'SERVICE')
+#
+#        ]
+#
+#        )
+#)
 
 node {
     stage ('git fetch') {
