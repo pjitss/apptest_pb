@@ -15,11 +15,24 @@ pipeline {
                     // Make sure Ansible is in the PATH or specify its absolute path.
                     // Execute the playbook
                     sh '''
+                        # Modify the PATH variable
                         export PATH=$PATH:/home/jits/.local/bin/
+
+                        # Set the PYTHONUSERBASE
+                        export PYTHONUSERBASE=/home/jits/.local
+
+                        # Show the modified PATH
                         echo "Modified PATH: $PATH"
+                
+                        # Check which Python interpreter Jenkins is using
+                        which python3
+                
+                        # Show location of ansible-playbook
                         which ansible-playbook
+                        
+                        # Run the playbook with full path
                         /home/jits/.local/bin/ansible-playbook /home/jits/mygit/apptest_pb/appstart.yml -i /home/jits/mygit/apptest_pb/myinven.ini
-                    '''
+                        '''
                 }
             }
         }
