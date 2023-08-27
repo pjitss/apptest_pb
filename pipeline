@@ -12,3 +12,11 @@ properties(
 
         )
 )
+
+node {
+    stage ('git fetch') {
+        git branch: 'main', credentialsId: 'ansible_user', url: 'https://github.com/pjitss/apptest_pb.git'
+    }
+}
+
+
