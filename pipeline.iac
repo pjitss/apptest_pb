@@ -1,0 +1,14 @@
+import groovy.json.JsonSluperClassic
+
+properties(
+
+        parameters([
+            string)defaultValue: 'prajeet', name: 'BRANCH'),
+            string)defaultValue: '0000', name: 'REQID'),
+            string)defaultValue: 'app', name: 'comp'),
+            string)defaultValue: '', name: 'SERVICE')
+
+        ]
+
+        )
+)
