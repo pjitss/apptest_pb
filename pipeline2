@@ -15,7 +15,7 @@ pipeline {
                     // Make sure Ansible is in the PATH or specify its absolute path.
                     // Execute the playbook
                     sh '''
-                        ansible all appstart.yml -i myinven.ini
+                        ansible-playbook appstart.yml -i myinven.ini
                     '''
                 }
             }
